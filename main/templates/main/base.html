@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>{% block title %}Мой блог{% endblock title %}</title>
+	<meta name="description" content="{% block description %}{% endblock description %}">
+	<meta name="keywords" content="{% block keywords %}{% endblock keywords %}">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+	<div class="page-header">
+		<a href="{% url 'articale_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		<h1><a href="{% url 'articale_list' %}">Мой блог</a></h1>
+	</div>
+	
+	<div class="content">
+		<div class="row">
+			<div class="col-md-8">
+				{% block content %}
+				{% endblock content %}
+			</div>
+			<div class="col-md-4">
+				{% block search_string %}
+				{% endblock search_string %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

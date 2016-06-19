@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+	{{ articale.title }}
+{% endblock title %}
+
+{% block description %}
+	{{ articale.description }}
+{% endblock description %}
+
+{% block keywords %}
+	{{ articale.keyWords }}
+{% endblock keywords %}
+
+{% block content %}
+	<div class="articale">
+		<a class="btn btn-default edit-btn" href="{% url 'articale_edit' pk=articale.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+		<div class="date">{{ articale.date }}</div>
+		{% if articale.image %}
+			<img src="{{ articale.image.url }}" class="header_image">
+		{% endif %}
+		<h2>{{ articale.headerArticale }}</h2>
+		<p>{{ articale.articale }}</p>
+	</div>
+{% endblock content %}

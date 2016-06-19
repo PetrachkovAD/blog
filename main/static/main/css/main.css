@@ -1,0 +1,67 @@
+body {
+	padding-left: 15px;
+}
+
+.page-header {
+	background-color: #ff9400;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+}
+
+.page-header h1 {
+	color: #ffffff;
+	font-size: 36pt;
+}
+
+.content {
+	margin-left: 40px;
+}
+
+h1, h2, h3, h4 {
+	font-family: cursive;
+}
+
+.header_image {
+	float: left;
+	height: 60px;
+	width: 60px;
+	margin-right: 20px;
+}
+
+.date {
+	float: right;
+	color: #828282;
+}
+
+.articale {
+	margin-bottom: 70px;
+}
+
+.save {
+	float: right;
+}
+
+.articale-form textarea, .articale-form input {
+	width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+	color: #ffffff;
+	float: right;
+	font-size: 26pt;
+}
+
+.page-header a, .page-header a:hover, .page-header a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.edit-btn {
+	float: right;
+	margin: -4px 0 0 10px;
+}
+
+.search_string {
+	float: right;
+	margin-right: 20px;
+}

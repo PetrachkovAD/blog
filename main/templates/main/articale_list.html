@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+	{% for articale in articales %}
+		<div class="articale">
+			{% if articale.image %}
+				<img src="{{ articale.image.url }}" class="header_image">
+			{% endif %}
+			<h2><a href="{% url 'articale_detail' pk=articale.pk %}">{{ articale.headerArticale }}</a></h2>
+			<p>{{ articale.cutArtical }}</p>
+			<div class="date">{{ articale.date }}</div>
+		</div>
+	{% endfor %}
+{% endblock content %}
+
+{% block search_string %}
+	<form method="GET" action="/articale/search/" class="search_string">
+		<input type="text" name="searchString" value="{{ searchString }}">
+		<input type="submit" value="Найти">
+	</form>
+{% endblock search_string %}
